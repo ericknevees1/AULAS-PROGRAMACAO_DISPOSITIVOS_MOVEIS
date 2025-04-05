@@ -1,3 +1,4 @@
+
 // Modulos ES6 -> Importando
 import {TabelaIMC, calcularIMC} from "./CalculadoraIMC.js"
 
@@ -22,3 +23,12 @@ const hoje = moment().locale('pt-br')
 console.log("Hoje é: ")
 console.log(hoje.format('DD/MM/yyyy'))
 
+
+import { registerRootComponent } from 'expo';
+
+import App from './App';
+
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+registerRootComponent(App);
